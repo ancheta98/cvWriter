@@ -1,0 +1,36 @@
+h1, h2 {
+    text-align: center;
+}
+#user-input{
+    width: 80%;
+    padding: 0% 1%;
+    margin:  auto;
+}
+.form-control {
+  margin-bottom: 1%;
+}
+
+#results {
+  width: 80%;
+  margin: auto;
+  padding: 1% 1%;
+}
+
+.dataTitle{
+  margin: 1% 0%;
+  width: 45%;
+  height: 3em;
+}
+
+.btn-danger{
+  float: right;
+  height: 3em;
+  margin: 1% 0%;
+}
+
+
+@media only screen and (max-width: 767px){
+  .dataTitle{
+    min-width: 100%;
+  }
+}
