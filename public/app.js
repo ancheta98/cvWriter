@@ -36,6 +36,16 @@ $(document).on("click", "#make-new", function() {
      location.reload()
     })
 });
+// updates the cover letter text for company name and position
+$(document).on("click", "#fillForm", function() {
+  let company = $("#companyName").val();
+  let position = $("#position").val();
+  $("#cNameText").text(company)
+  $("#positionText").text(position)
+  //reset the text color to black
+  $("#cNameText").css('color', 'black');
+  $("#positionText").css('color', 'black');
+})
 
 $(document).on("click", ".btn-danger", function() {
   var selected = $(this).parent();
