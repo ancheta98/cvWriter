@@ -12,20 +12,40 @@
     <style media="screen"></style>
   </head>
   <body>
-    <h1>Statistics Note App</h1>
+    <h1>Write a Cover letter!</h1>
     <div id="wrapper">
       <div id="user-input">
-        <input class="form-control" id="searchBar" type="text" placeholder="Search for an existing word"/>
-        <h2>Create a new vocab word</h2>
+        <h2>Create new Back/ Front end bullets</h2>
         <input class="form-control" type="text" id="title" placeholder="Enter bullet point"/>
         <label class="checkbox"><input type="checkbox" id="backend">Is this back end related?</input></label>
         <div id="buttons">
           <div id="action-button">
-            <button id="make-new" class="btn btn-block btn-info">Submit</button>
+            <button id="make-new" class="btn btn-block btn-info">Submit new bullet point</button>
           </div>
         </div>
+        <!-- dynamically changes the document to reflect the correct company -->
+        <input class="form-control" type="text" id="companyName" placeholder="What company is this for?">
+        <input class="form-control" type="text" id="postition" placeholder="What position will you be applying for?">
+        <button id="fillForm" class="btn btn-block btn-success">Submit</button>
       </div>
-      <div id="results"></div>
+      <div class="container">
+        <p>Angel Ancheta</p> 
+        <p>Glendale, CA 91206</p> 
+        <p>(818) 858-6134</p> 
+        <p>angelancheta98@yahoo.com</p> 
+        <p>Dear Hiring Manager,</p> 
+        <p>I am a hard-working and self-sufficient candidate who is focused on professional development and success of my team and the company. I am initiating contact to declare my candidacy for employment at <span id="cNameText">{company name}</span> as a <span id="postitionText">{position}</span>.</p>
+        <p>My best qualities and attributes that make me an ideal candidate include:</p>
+        <ul id="bulletPoints">
+          <!-- Points appear dynamically as they are created -->
+          <!-- can be deleted on click -->
+        </ul>
+        <p>I appreciate your consideration, and I can be reached at angelancheta98@yahoo.com or at (818) 858-6134. I am very excited about this opportunity to discuss my future at CloudSploit. Thank you for your time.</p>
+
+        <p>Respectfully,</p>
+        <p>Angel Ancheta </p>
+
+      </div>
     </div>
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">

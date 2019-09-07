@@ -1,6 +1,9 @@
 h1, h2 {
     text-align: center;
 }
+span{
+  color: red;
+}
 #user-input{
     width: 80%;
     padding: 0% 1%;

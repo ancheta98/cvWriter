@@ -16,23 +16,7 @@ $("#searchBar").on("keyup", function() {
     );
   });
 });
-function getResults() {
-  $("#results").empty();
-  $.getJSON("/all", function(data) {
-    for (var i = 0; i < data.length; i++) {
-      $("#results").prepend(
-        "<div class='data-entry' data-id=" +
-          data[i]._id +
-          "><button class='dataTitle btn' data-toggle='modal' data-target='#myModal' data-id=" +
-          data[i]._id +
-          ">" +
-          data[i].title +
-          "</button><span class='btn btn-danger'>Delete Entry</span></div>"
-      );
-    }
-  });
-}
-getResults();
+
 $(document).on("click", "#make-new", function() {
   console.log($("#backend").is(":checked"))
   //get the text for the bullet point and then figure out if it's a back end skill (for categorization)
@@ -49,18 +33,8 @@ $(document).on("click", "#make-new", function() {
     // If that API call succeeds, add the title and a delete button for the note to the page
     .then(function(data) {
       // Add the title and delete button to the #results section
-      $("#results").prepend(
-        "<div class='data-entry' data-id=" +
-          data._id +
-          "><button class='dataTitle btn' data-toggle='modal' data-target='#myModal' data-id=" +
-          data._id +
-          ">" +
-          data.title +
-          "</button><button class='btn btn-danger'>Delete Entry</button></div>"
-      );
-      $("#title").val("");
-      $("#backend").prop("checked", false)
-    });
+     location.reload()
+    })
 });
 
 $(document).on("click", ".btn-danger", function() {
